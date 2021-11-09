@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+.card{
+ 
+width:18rem;
+height:40em;
+margin: 10px;
+}
+.button{
+  position: absolute;
+  top: 91%;
+  right: 52%;
+}
+.button1{
+  position: absolute;
+  top: 91%;
+  right: 75%;
+}
+body{
+  background: linear-gradient( #737697 ,red);
+}

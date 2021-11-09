@@ -1,8 +1,9 @@
 
 import { Component } from "react";
-import {Container, Card, Button,  Row} from "react-bootstrap"
+import {Container, Card, Button,  Row, } from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import item from '../data/history.json'
+import { height } from "dom-helpers";
 class HistoryBooks extends Component{
     render(){
         return(
@@ -10,29 +11,28 @@ class HistoryBooks extends Component{
                   <>
               <Container>
                 <h2 className="text-center my-5">Latest Release</h2>
-                  <Row className="row">
+                  <Row className="row justify-content-center ">
 
-                
               {
-             
+                  
          
              item.map(HistoryBook => (
-        
-                <Card style={{ width: '20rem' }}>
-                <Card.Img variant="top" src= {HistoryBook.img} />
+                 
+                 <Card class = 'card'>
+                    
+                    
+                <Card.Img class = '' variant="top" src= {HistoryBook.img} />
                 <Card.Body>
                   <Card.Title>Card Title</Card.Title>
                   <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk of
-                    the card's content.
+                   {HistoryBook.title}
                   </Card.Text>
-                  <Button className="pl-1" variant="primary ">Edit</Button>
-                  <Button variant="success">View</Button>
+                  <Button className=" button1 float-right mb-5 m-2" variant="primary ">Edit</Button>
+                  <Button className=' button float-right mt-2'variant="success">View</Button>
 
                 </Card.Body>
               </Card>
- 
-                
+
                 
              ))
           }
