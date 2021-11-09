@@ -1,328 +1,47 @@
-const Images = () =>(
-    <div class="album py-5 bg-light">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-          
-              <img src = "https://images-na.ssl-images-amazon.com/images/I/71O3WN6oyzL.jpg"
-              class="bd-placeholder-img card-img-top"
-              width="100%"
-              height="225" />
+
+import { Component } from "react";
+import {Container, Card, Button,  Row} from "react-bootstrap"
+import 'bootstrap/dist/css/bootstrap.min.css'
+import item from '../data/history.json'
+class HistoryBooks extends Component{
+    render(){
+        return(
             
+                  <>
+              <Container>
+                <h2 className="text-center my-5">Latest Release</h2>
+                  <Row className="row">
+
+                
+              {
              
-            <div class="card-body">
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-              <div
-                class="d-flex justify-content-between align-items-center"
-              >
-                <div class="btn-group">
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    View
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    Edit
-                  </button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-               <img src = "https://images-na.ssl-images-amazon.com/images/I/81XDguZCJgL.jpg"
-              class="bd-placeholder-img card-img-top"
-              width="100%"
-              height="225" />
-            
-            <div class="card-body">
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-              <div
-                class="d-flex justify-content-between align-items-center"
-              >
-                <div class="btn-group">
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    View
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    Edit
-                  </button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-              <img src = "https://images-na.ssl-images-amazon.com/images/I/81coZ37EmxL.jpg"
-              class="bd-placeholder-img card-img-top"
-              width="100%"
-              height="225" />
-            
-            <div class="card-body">
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-              <div
-                class="d-flex justify-content-between align-items-center"
-              >
-                <div class="btn-group">
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    View
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    Edit
-                  </button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
+         
+             item.map(HistoryBook => (
+        
+                <Card style={{ width: '20rem' }}>
+                <Card.Img variant="top" src= {HistoryBook.img} />
+                <Card.Body>
+                  <Card.Title>Card Title</Card.Title>
+                  <Card.Text>
+                    Some quick example text to build on the card title and make up the bulk of
+                    the card's content.
+                  </Card.Text>
+                  <Button className="pl-1" variant="primary ">Edit</Button>
+                  <Button variant="success">View</Button>
 
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-          <img src = "https://images-na.ssl-images-amazon.com/images/I/81XDguZCJgL.jpg"
-              class="bd-placeholder-img card-img-top"
-              width="100%"
-              height="225" />
-            
-            <div class="card-body">
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-              <div
-                class="d-flex justify-content-between align-items-center"
-              >
-                <div class="btn-group">
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    View
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    Edit
-                  </button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-              <img src = "https://images-na.ssl-images-amazon.com/images/I/91NZ5Cw-4TL.jpg"
-              class="bd-placeholder-img card-img-top"
-              width="100%"
-              height="225" />
-            
-            <div class="card-body">
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-              <div
-                class="d-flex justify-content-between align-items-center"
-              >
-                <div class="btn-group">
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    View
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    Edit
-                  </button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-            <img src = "https://images-na.ssl-images-amazon.com/images/I/411nhI-kPYL.jpg"
-              class="bd-placeholder-img card-img-top"
-              width="100%"
-              height="225" />
-            
-            <div class="card-body">
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-              <div
-                class="d-flex justify-content-between align-items-center"
-              >
-                <div class="btn-group">
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    View
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    Edit
-                  </button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
+                </Card.Body>
+              </Card>
+ 
+                
+                
+             ))
+          }
+            </Row>
+              </Container>
+    
 
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-              <img src = "https://images-na.ssl-images-amazon.com/images/I/71O3WN6oyzL.jpg"
-              class="bd-placeholder-img card-img-top"
-              width="100%"
-              height="225" />
-            
-            <div class="card-body">
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-              <div
-                class="d-flex justify-content-between align-items-center"
-              >
-                <div class="btn-group">
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    View
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    Edit
-                  </button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-               <img src = "https://images-na.ssl-images-amazon.com/images/I/71O3WN6oyzL.jpg"
-              class="bd-placeholder-img card-img-top"
-              width="100%"
-              height="225" />
-            
-            <div class="card-body">
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-              <div
-                class="d-flex justify-content-between align-items-center"
-              >
-                <div class="btn-group">
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    View
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    Edit
-                  </button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card mb-4 shadow-sm">
-               <img src = "https://images-na.ssl-images-amazon.com/images/I/71O3WN6oyzL.jpg"
-              class="bd-placeholder-img card-img-top"
-              width="100%"
-              height="225" />
-            
-            <div class="card-body">
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-              <div
-                class="d-flex justify-content-between align-items-center"
-              >
-                <div class="btn-group">
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    View
-                  </button>
-                  <button
-                    type="button"
-                    class="btn btn-sm btn-outline-secondary"
-                  >
-                    Edit
-                  </button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-)
-export default Images
+            </>
+        )
+    }
+}
+export default HistoryBooks
