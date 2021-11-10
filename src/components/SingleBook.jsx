@@ -9,10 +9,12 @@ class SingleBook extends Component {
 
 render() {
   return (
-        <Card className ='card'>
+        <Card className ='card' bg={this.state.selected ? 'success' : 'light'}>
                             
                             
-        <Card.Img variant="top" src= {this.props.obj.img} />
+        <Card.Img variant="top" src= {this.props.obj.img} onClick={() => {
+          this.setState({selected: !this.state.selected})
+        }}/>
         
         <Card.Body>
 
