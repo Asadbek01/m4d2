@@ -12,7 +12,7 @@ render() {
         <Card className ='card'>
                             
                             
-        <Card.Img variant="top" src= {this.props.obj.img} onClick={}/>
+        <Card.Img variant="top" src= {this.props.obj.img} />
         
         <Card.Body>
 

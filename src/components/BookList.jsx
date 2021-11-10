@@ -26,7 +26,7 @@ class BookList extends Component {
                 </InputGroup>
     
                 {
-                    this.props.data.filter(book => book.title.includes(this.state.searchQuery) ).map((HistoryBook, index) => (
+                    this.props.data.filter(book => book.title.toLowerCase().includes(this.state.searchQuery.toLowerCase()) ).map((HistoryBook, index) => (
 
                         <SingleBook key={index} obj={HistoryBook}/>
                     ))
