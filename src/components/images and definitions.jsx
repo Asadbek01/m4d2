@@ -5,8 +5,12 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import item from '../data/history.json'
 import ImageComments from './imageComments'
 class HistoryBooks extends Component{
-      state= {
-      SelectedImage: null,
+
+  
+         state = {
+
+
+             SelectedImage: undefined,
 }
 
     render(){
@@ -25,14 +29,20 @@ class HistoryBooks extends Component{
                  <Card class = 'card'>
                     
                     
-                <Card.Img variant="top" src= {HistoryBook.img} />
+                <Card.Img variant="top" src= {HistoryBook.img} 
+                onClick ={()=> this.setState(
+                  {
+                    SelectedImage: HistoryBook
+                  }
+                  )} 
+                 />
                 <Card.Body>
                   <Card.Title>Card Title</Card.Title>
                   <Card.Text>
                    {HistoryBook.title}
                   </Card.Text>
-                  <Button  onClick ={()=> this.setState({SelectedImage: HistoryBook})} className="button1 float-right mb-5 m-2" variant="primary ">Edit</Button>
-                  <Button onclick ={()=> this.setState({SelectedImage: HistoryBook})} className=' button float-right mt-2'variant="success">View</Button>
+                  <Button   className="button1 float-right mb-5 m-2" variant="primary ">Edit</Button>
+                  <Button className=' button float-right mt-2'variant="success">View</Button>
 
                 </Card.Body>
               </Card>

@@ -4,14 +4,16 @@ import MyFooter from './components/MyFooter';
 import Jumbo from './components/jumbotron';
 import HistoryBooks from "./components/images and definitions"
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Reservation from './components/Reservation';
+// import Reservation from './components/Reservation';
+import WarningSign from './components/warningSign';
 
 function App() {
   return (
 <div>
 <MyNavbar />
+<WarningSign text="Do smth" />
 <Jumbo />
-<Reservation />
+{/* <Reservation /> */}
 <HistoryBooks />
 <MyFooter />
 </div>
