@@ -11,7 +11,7 @@ function App() {
   return (
 <div>
 <MyNavbar />
-<WarningSign text="Do smth" />
+<WarningSign text="Do Something" />
 <Jumbo />
 {/* <Reservation /> */}
 <HistoryBooks />

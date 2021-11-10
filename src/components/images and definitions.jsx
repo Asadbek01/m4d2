@@ -4,7 +4,7 @@ import {Container, Row, Col } from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import item from '../data/history.json'
 import ImageComments from './imageComments'
-import SingleBook from "./SingleBook";
+import BookList from "./BookList";
 class HistoryBooks extends Component{
 
   
@@ -21,19 +21,7 @@ class HistoryBooks extends Component{
               <Container>
                 <h2 className="text-center my-5">Latest Release</h2>
                   <Row className="row justify-content-center ">
-
-              {
-                  
-         
-             item.map(HistoryBook => (
-                 
-                  
-                    
-              <SingleBook obj={HistoryBook}/>
-
-                
-             ))
-          }
+                    <BookList data={item} />
             </Row>
             <Row className="mt-3 justify-content-center">
               <Col xs={12} md={6} className="text-center">
