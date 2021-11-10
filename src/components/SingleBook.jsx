@@ -1,18 +1,29 @@
+import { Component } from 'react'
 import Card from 'react-bootstrap/Card'
-const SingleBook =(props)=>(
 
-<Card className ='card'>
-                    
-                    
-<Card.Img variant="top" src= {props.obj.img} />
- 
-<Card.Body>
+class SingleBook extends Component {
 
-  <Card.Text>
-   {props.obj.title}
-  </Card.Text>
- 
-</Card.Body>
-</Card>
-)
+  state =  {
+    selected: false
+  }
+
+render() {
+  return (
+        <Card className ='card'>
+                            
+                            
+        <Card.Img variant="top" src= {this.props.obj.img} onClick={}/>
+        
+        <Card.Body>
+
+          <Card.Text>
+          {this.props.obj.title}
+          </Card.Text>
+        
+        </Card.Body>
+        </Card>
+  )
+}
+}
+
 export default SingleBook;
