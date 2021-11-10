@@ -4,12 +4,14 @@ import MyFooter from './components/MyFooter';
 import Jumbo from './components/jumbotron';
 import HistoryBooks from "./components/images and definitions"
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Reservation from './components/Reservation';
 
 function App() {
   return (
 <div>
 <MyNavbar />
 <Jumbo />
+<Reservation />
 <HistoryBooks />
 <MyFooter />
 </div>

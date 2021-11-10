@@ -1,10 +1,14 @@
 
 import { Component } from "react";
-import {Container, Card, Button,  Row, } from "react-bootstrap"
+import {Container, Card, Button,  Row, Col } from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import item from '../data/history.json'
-import { height } from "dom-helpers";
+import ImageComments from './imageComments'
 class HistoryBooks extends Component{
+      state= {
+      SelectedImage: null,
+}
+
     render(){
         return(
             
@@ -21,14 +25,14 @@ class HistoryBooks extends Component{
                  <Card class = 'card'>
                     
                     
-                <Card.Img class = '' variant="top" src= {HistoryBook.img} />
+                <Card.Img variant="top" src= {HistoryBook.img} />
                 <Card.Body>
                   <Card.Title>Card Title</Card.Title>
                   <Card.Text>
                    {HistoryBook.title}
                   </Card.Text>
-                  <Button className=" button1 float-right mb-5 m-2" variant="primary ">Edit</Button>
-                  <Button className=' button float-right mt-2'variant="success">View</Button>
+                  <Button  onClick ={()=> this.setState({SelectedImage: HistoryBook})} className="button1 float-right mb-5 m-2" variant="primary ">Edit</Button>
+                  <Button onclick ={()=> this.setState({SelectedImage: HistoryBook})} className=' button float-right mt-2'variant="success">View</Button>
 
                 </Card.Body>
               </Card>
@@ -36,6 +40,11 @@ class HistoryBooks extends Component{
                 
              ))
           }
+            </Row>
+            <Row className="mt-3 justify-content-center">
+              <Col xs={12} md={6} className="text-center">
+                <ImageComments SelectedImage={this.state.SelectedImage} />
+              </Col>
             </Row>
               </Container>
     
