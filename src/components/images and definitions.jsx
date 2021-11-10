@@ -4,6 +4,7 @@ import {Container, Card, Button,  Row, Col } from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import item from '../data/history.json'
 import ImageComments from './imageComments'
+import SingleBook from "./SingleBook";
 class HistoryBooks extends Component{
 
   
@@ -25,27 +26,8 @@ class HistoryBooks extends Component{
                   
          
              item.map(HistoryBook => (
-                 
-                 <Card class = 'card'>
-                    
-                    
-                <Card.Img variant="top" src= {HistoryBook.img} 
-                onClick ={()=> this.setState(
-                  {
-                    SelectedImage: HistoryBook
-                  }
-                  )} 
-                 />
-                <Card.Body>
-                  <Card.Title>Card Title</Card.Title>
-                  <Card.Text>
-                   {HistoryBook.title}
-                  </Card.Text>
-                  <Button   className="button1 float-right mb-5 m-2" variant="primary ">Edit</Button>
-                  <Button className=' button float-right mt-2'variant="success">View</Button>
-
-                </Card.Body>
-              </Card>
+               
+              <SingleBook obj={HistoryBook} />
 
                 
              ))
