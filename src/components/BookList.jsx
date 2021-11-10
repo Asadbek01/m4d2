@@ -1,19 +1,38 @@
+import {Component} from 'react'
 import SingleBook from "./SingleBook";
+import InputGroup from "react-bootstrap/InputGroup";
+import FormControl from "react-bootstrap/FormControl";
 
-// const BookList = (props) => (
-//     {console.log(props)}
-//     <h1>Hi</h1>
-//     // props.data.map(HistoryBook => (
-//     //     <SingleBook obj={HistoryBook}/>
-//     // ))
-// )
+class BookList extends Component {
 
-const BookList = (props) => {
-    return (
-        props.data.map((HistoryBook, index) => (
-            <SingleBook key={index} obj={HistoryBook}/>
-        ))
-    )
+    state = {
+        searchQuery: ''
+    }
+
+
+    render() {
+        return (
+            <>
+                <InputGroup className="mb-3">
+                    <FormControl
+                    placeholder="Search"
+                    value={this.state.searchQuery}
+                    onChange={e => {
+                        return this.setState({
+                            searchQuery: e.target.value
+                        })
+                    }}
+                    />
+                </InputGroup>
+    
+                {
+                    this.props.data.map((HistoryBook, index) => (
+                        <SingleBook key={index} obj={HistoryBook}/>
+                    ))
+                }
+            </> 
+        )
+    }
 }
 
 export default BookList
