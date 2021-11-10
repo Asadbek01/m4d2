@@ -24,12 +24,13 @@ class BookList extends Component {
                     }}
                     />
                 </InputGroup>
-    
+                    {/* improved */}
                 {
                     this.props.data.filter(book => book.title.toLowerCase().includes(this.state.searchQuery.toLowerCase()) ).map((HistoryBook, index) => (
 
                         <SingleBook key={index} obj={HistoryBook}/>
                     ))
+
                 }
             </> 
         )
