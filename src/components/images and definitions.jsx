@@ -1,6 +1,6 @@
 
 import { Component } from "react";
-import {Container, Card, Button,  Row, Col } from "react-bootstrap"
+import {Container, Row, Col } from "react-bootstrap"
 import 'bootstrap/dist/css/bootstrap.min.css'
 import item from '../data/history.json'
 import ImageComments from './imageComments'
@@ -26,8 +26,10 @@ class HistoryBooks extends Component{
                   
          
              item.map(HistoryBook => (
-               
-              <SingleBook obj={HistoryBook} />
+                 
+                  
+                    
+              <SingleBook obj={HistoryBook}/>
 
                 
              ))

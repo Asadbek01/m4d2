@@ -1,18 +1,18 @@
 import Card from 'react-bootstrap/Card'
-const SingleBook =(props)=>{
+const SingleBook =(props)=>(
 
-<Card class = 'card'>
+<Card className ='card'>
                     
                     
-<Card.Img variant="top" src= {props.HistoryBook.img} />
+<Card.Img variant="top" src= {props.obj.img} />
  
 <Card.Body>
 
   <Card.Text>
-   {props.HistoryBook.title}
+   {props.obj.title}
   </Card.Text>
  
 </Card.Body>
 </Card>
-}
+)
 export default SingleBook;
